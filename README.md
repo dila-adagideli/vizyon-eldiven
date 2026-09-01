@@ -1,36 +1,72 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Vizyon Zımparalı Eldiven
 
-## Getting Started
+Yerli üretim profesyonel zımpara eldiveni için statik tanıtım sitesi.
 
-First, run the development server:
+## Çalıştırma
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Tarayıcıda [http://localhost:3000](http://localhost:3000) adresini açın.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Diğer komutlar
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npm run build
+npm run start
+```
 
-## Learn More
+## Site URL
 
-To learn more about Next.js, take a look at the following resources:
+Canonical, Open Graph, robots.txt ve sitemap `NEXT_PUBLIC_SITE_URL` değerinden üretilir.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. `.env.example` dosyasını `.env.local` olarak kopyalayın.
+2. Production’da gerçek domain’i **https** ile yazın. Domain uydurmayın.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+NEXT_PUBLIC_SITE_URL=https://gercek-domain.com
+```
 
-## Deploy on Vercel
+Yerel geliştirmede fallback `http://localhost:3000` kullanılır. Bu değer production metadata, sitemap veya robots host olarak kalmamalıdır.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+`NEXT_PUBLIC_SITE_URL` build sırasında okunur; hosting panelinde production build’den önce tanımlanmalıdır.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+UTM ve `gclid` parametreleri sayfayı kırmaz. Canonical her zaman temiz anasayfa URL’sidir; query string canonical’e eklenmez.
+
+---
+
+## Production SEO & Google Ads Checklist
+
+### Deployment öncesi
+
+- [ ] `NEXT_PUBLIC_SITE_URL` gerçek production domain (https, trailing slash yok)
+- [ ] Gerçek domain belirlendi; www / non-www için tek tercih edilen hostname hosting’de yönlendirilecek
+- [ ] Gerçek favicon ve logo dosyaları `public/images/logo-horizontal.png` ve `public/images/vizyon-ve-icon.png` konumunda
+- [ ] Apple touch icon için gerekirse daha yüksek çözünürlüklü kare VE ikonu (mevcut `vizyon-ve-icon.png` upscale edilmeden kullanılıyor)
+- [ ] Gerçek iletişim bilgileri `src/lib/site.ts` içinde dolduruldu
+- [ ] Title, description ve Open Graph önizlemesi son kez gözden geçirildi
+- [ ] Build çıktısında localhost URL yok
+- [ ] `npm run lint` ve `npm run build` temiz
+- [ ] Lighthouse production benzeri ortamda çalıştırıldı (Performance / Accessibility / Best Practices / SEO hedefleri 90+)
+
+### Deployment sonrası
+
+- [ ] HTTPS zorunlu; HTTP → HTTPS yönlendirme
+- [ ] Tek canonical hostname (www veya non-www, biri diğerine)
+- [ ] Canonical URL: `NEXT_PUBLIC_SITE_URL` ile aynı
+- [ ] `/robots.txt` 200; `Disallow` yok; Googlebot ve AdsBot-Google izinli; sitemap satırı production domain
+- [ ] `/sitemap.xml` 200; yalnızca crawl edilebilir anasayfa
+- [ ] Google Search Console property ekle, domain ownership doğrula
+- [ ] `sitemap.xml` gönder
+- [ ] Homepage URL Inspection çalıştır; gerekirse indexing request
+- [ ] Mobil render kontrolü
+- [ ] Rich Results Test (Organization / WebSite / Product)
+- [ ] PageSpeed Insights (LCP, CLS, INP)
+- [ ] Google Ads final URL = canonical homepage; display domain eşleşmesi
+- [ ] Google AdsBot crawlability
+- [ ] GA4 Measurement ID ve Google Ads Conversion ID verildiğinde ekle (şimdi uydurma)
+- [ ] Tracking açılırsa consent / gizlilik yapılandırması
+- [ ] Search Console doğrulama kodu: `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` (Metadata API hazır; token yokken boş bırakın)
