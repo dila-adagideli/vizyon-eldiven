@@ -14,7 +14,7 @@ import { SkipLink } from "@/components/layout/SkipLink";
 import { JsonLd } from "@/components/seo/JsonLd";
 import {
   organizationJsonLd,
-  productJsonLd,
+  webPageJsonLd,
   websiteJsonLd,
 } from "@/lib/schema";
 import { getSiteUrl, isLocalSiteUrl, ogImage, siteConfig } from "@/lib/site";
@@ -120,7 +120,7 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
         <Providers initialLocale={locale}>
           <JsonLd data={organizationJsonLd()} />
           <JsonLd data={websiteJsonLd()} />
-          <JsonLd data={productJsonLd()} />
+          <JsonLd data={webPageJsonLd()} />
           <SkipLink />
           <Header />
           <main id="icerik" className="flex-1">

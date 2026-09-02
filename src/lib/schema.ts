@@ -1,7 +1,6 @@
 import {
   absoluteUrl,
   companyPlaceholders,
-  productPlaceholders,
   siteConfig,
 } from "@/lib/site";
 
@@ -65,36 +64,23 @@ export function websiteJsonLd() {
   };
 }
 
-export function productJsonLd() {
-  const offers =
-    productPlaceholders.price === ""
-      ? undefined
-      : compact({
-          "@type": "Offer",
-          price: productPlaceholders.price,
-          priceCurrency: productPlaceholders.priceCurrency,
-          url: absoluteUrl("/"),
-        });
-
-  const image = productPlaceholders.image
-    ? [productPlaceholders.image]
-    : [
-        absoluteUrl("/images/vizyon-hero.webp"),
-        absoluteUrl("/images/vizyon-studio.webp"),
-      ];
-
-  return compact({
+export function webPageJsonLd() {
+  return {
     "@context": "https://schema.org",
-    "@type": "Product",
-    name: "Vizyon Zımparalı Eldiven",
+    "@type": "WebPage",
+    name: siteConfig.title,
     description: siteConfig.description,
-    brand: {
-      "@type": "Brand",
-      name: "Vizyon",
+    url: absoluteUrl("/"),
+    inLanguage: siteConfig.language,
+    isPartOf: {
+      "@type": "WebSite",
+      name: siteConfig.name,
+      url: absoluteUrl("/"),
     },
-    sku: productPlaceholders.sku,
-    gtin: productPlaceholders.gtin,
-    image,
-    offers,
-  });
+    about: {
+      "@type": "Thing",
+      name: "Vizyon Zımparalı Eldiven",
+      description: siteConfig.description,
+    },
+  };
 }
