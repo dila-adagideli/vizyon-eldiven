@@ -58,6 +58,11 @@ export const en: Messages = {
     specLocal: "Made in Türkiye",
     specMulti: "Multi-Industry Use",
   },
+  brandStatement: {
+    line: "THE WORLD'S",
+    emphasis: "FIRST AND ONLY",
+    product: "VIZYON SANDING GLOVE",
+  },
   productIntro: {
     eyebrow: "Product / 01",
     title: "A New Way to Feel the Abrasive in Your Hand.",

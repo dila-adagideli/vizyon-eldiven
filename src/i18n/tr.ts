@@ -58,6 +58,11 @@ export const tr: Messages = {
     specLocal: "Yerli Üretim",
     specMulti: "Çoklu Sektör Kullanımı",
   },
+  brandStatement: {
+    line: "DÜNYADA",
+    emphasis: "İLK VE TEK",
+    product: "VİZYON ZIMPARALI ELDİVEN",
+  },
   productIntro: {
     eyebrow: "Ürün / 01",
     title: "Zımparayı Elinizle Hissetmenin Yeni Yolu.",

@@ -58,6 +58,11 @@ export const de: Messages = {
     specLocal: "Hergestellt in Türkiye",
     specMulti: "Einsatz in mehreren Branchen",
   },
+  brandStatement: {
+    line: "WELTWEIT",
+    emphasis: "DIE ERSTE UND EINZIGE",
+    product: "VIZYON SCHLEIFHANDSCHUH",
+  },
   productIntro: {
     eyebrow: "Produkt / 01",
     title: "Schleifen, das Sie mit der Hand spüren.",

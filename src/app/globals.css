@@ -77,7 +77,8 @@ html[lang="ar"] {
 }
 
 html[lang="ar"] .t-label,
-html[lang="ar"] .t-eyebrow {
+html[lang="ar"] .t-eyebrow,
+html[lang="ar"] .brand-statement-product {
   letter-spacing: 0.04em;
   text-transform: none;
 }
@@ -228,6 +229,11 @@ html[dir="rtl"] .dir-arrow {
     transition: transform 500ms ease-out;
   }
 
+  .brand-statement-zoom {
+    transform-origin: center;
+    transition: transform 500ms ease-out;
+  }
+
   .use-case-copy .use-case-label {
     transition: color 200ms ease-out;
   }
@@ -276,6 +282,10 @@ html[dir="rtl"] .dir-arrow {
 
   .logo-zoom-header:hover {
     transform: scale(1.15);
+  }
+
+  .brand-statement-band:hover .brand-statement-zoom {
+    transform: scale(1.045);
   }
 
   .use-case-copy:hover .use-case-heading {
@@ -350,6 +360,23 @@ html[dir="rtl"] .dir-arrow {
   animation: scale-line 0.75s ease-out 0.15s both;
 }
 
+@keyframes brand-emphasis {
+  0%,
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 0 transparent;
+  }
+
+  50% {
+    opacity: 0.94;
+    text-shadow: 0 0 0.45em color-mix(in srgb, var(--accent) 14%, transparent);
+  }
+}
+
+.brand-emphasis {
+  animation: brand-emphasis 3.6s ease-in-out infinite;
+}
+
 html[dir="rtl"] .scale-line {
   transform-origin: right center;
 }
@@ -361,7 +388,8 @@ html[dir="rtl"] .scale-line {
   .hero-delay-2,
   .hero-delay-3,
   .hero-delay-4,
-  .scale-line {
+  .scale-line,
+  .brand-emphasis {
     animation: none;
   }
 
@@ -369,6 +397,7 @@ html[dir="rtl"] .scale-line {
   .nav-link::after,
   .media-zoom img,
   .logo-zoom,
+  .brand-statement-zoom,
   .use-case-copy .use-case-label,
   .use-case-copy .use-case-heading,
   .use-case-copy .use-case-text {
@@ -380,6 +409,7 @@ html[dir="rtl"] .scale-line {
   .media-zoom:hover img,
   .logo-zoom:hover,
   .logo-zoom-header:hover,
+  .brand-statement-band:hover .brand-statement-zoom,
   .use-case-copy:hover .use-case-heading {
     transform: none;
   }

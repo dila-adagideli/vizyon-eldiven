@@ -50,6 +50,11 @@ export type Messages = {
     specLocal: string;
     specMulti: string;
   };
+  brandStatement: {
+    line: string;
+    emphasis: string;
+    product: string;
+  };
   productIntro: {
     eyebrow: string;
     title: string;

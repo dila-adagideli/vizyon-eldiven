@@ -58,6 +58,11 @@ export const ar: Messages = {
     specLocal: "صنع في Türkiye",
     specMulti: "استخدام متعدد القطاعات",
   },
+  brandStatement: {
+    line: "في العالم",
+    emphasis: "الأولى والوحيدة",
+    product: "قفاز صنفرة فيزيون",
+  },
   productIntro: {
     eyebrow: "المنتج / 01",
     title: "طريقة جديدة لتحسّ بالصنفر في يدك.",

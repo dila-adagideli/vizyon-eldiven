@@ -58,6 +58,11 @@ export const ru: Messages = {
     specLocal: "Произведено в Türkiye",
     specMulti: "Применение в разных отраслях",
   },
+  brandStatement: {
+    line: "В МИРЕ",
+    emphasis: "ПЕРВАЯ И ЕДИНСТВЕННАЯ",
+    product: "VIZYON ШЛИФОВАЛЬНАЯ ПЕРЧАТКА",
+  },
   productIntro: {
     eyebrow: "Продукт / 01",
     title: "Новый способ чувствовать абразив рукой.",
