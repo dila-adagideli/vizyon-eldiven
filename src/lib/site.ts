@@ -100,9 +100,12 @@ export function getMailtoHref(email: string, subject?: string) {
   return `mailto:${address}?subject=${encodeURIComponent(subject)}`;
 }
 
-export function getWhatsAppHref(raw: string) {
+export function getWhatsAppHref(raw: string, text?: string) {
   const digits = raw.replace(/\D/g, "");
-  return digits ? `https://wa.me/${digits}` : "";
+  if (!digits) return "";
+  const base = `https://wa.me/${digits}`;
+  if (!text?.trim()) return base;
+  return `${base}?text=${encodeURIComponent(text)}`;
 }
 
 /**

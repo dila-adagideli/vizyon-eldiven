@@ -16,7 +16,10 @@ export function Contact() {
   const dealership = messages.dealership;
 
   const phoneHref = isContactValue(contactConfig.whatsapp)
-    ? getWhatsAppHref(contactConfig.whatsapp)
+    ? getWhatsAppHref(
+        contactConfig.whatsapp,
+        "Merhaba, Vizyon Zımparalı Eldiven hakkında bilgi almak istiyorum.",
+      )
     : "";
   const emailHref = isContactValue(contactConfig.email)
     ? getMailtoHref(contactConfig.email)
