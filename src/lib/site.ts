@@ -74,7 +74,7 @@ export const companyPlaceholders = {
 export const contactConfig = {
   phone: "0545 442 74 77",
   email: "info@vizyoneldiven.com",
-  whatsapp: "",
+  whatsapp: "905454427477",
 } as const;
 
 export const dealershipMailSubject = "Vizyon Bölgesel Bayilik Başvurusu";

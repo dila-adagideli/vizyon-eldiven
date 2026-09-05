@@ -6,7 +6,7 @@ import { useLanguage } from "@/i18n/LanguageProvider";
 import {
   contactConfig,
   getMailtoHref,
-  getTelHref,
+  getWhatsAppHref,
   isContactValue,
 } from "@/lib/site";
 
@@ -15,8 +15,8 @@ export function Contact() {
   const copy = messages.contact;
   const dealership = messages.dealership;
 
-  const phoneHref = isContactValue(contactConfig.phone)
-    ? getTelHref(contactConfig.phone)
+  const phoneHref = isContactValue(contactConfig.whatsapp)
+    ? getWhatsAppHref(contactConfig.whatsapp)
     : "";
   const emailHref = isContactValue(contactConfig.email)
     ? getMailtoHref(contactConfig.email)
@@ -56,11 +56,10 @@ export function Contact() {
                 </span>
                 <a
                   href={phoneHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="editorial-link mt-3 inline-block font-display text-[1.35rem] tracking-[-0.02em] text-background sm:text-[1.5rem]"
-                  aria-label={messages.a11y.callPhone.replace(
-                    "{phone}",
-                    contactConfig.phone,
-                  )}
+                  aria-label="WhatsApp üzerinden iletişime geç"
                 >
                   {contactConfig.phone}
                 </a>
