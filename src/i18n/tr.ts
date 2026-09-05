@@ -18,6 +18,7 @@ export const tr: Messages = {
     callPhone: "{phone} numaralı telefonu ara",
     sendEmail: "{email} adresine e-posta gönder",
     dealershipEmail: "Bayilik başvurusu için e-posta gönder",
+    openInstagram: "Vizyon Zımparalı Eldiven Instagram hesabını aç",
   },
   nav: {
     product: "Ürün",
@@ -196,6 +197,7 @@ export const tr: Messages = {
       "Ürünlerimiz, satış süreçlerimiz ve iş birliği fırsatları hakkında bilgi almak için bizimle iletişime geçebilirsiniz.",
     phone: "Telefon",
     email: "E-posta",
+    instagram: "Instagram",
     topics: ["Ürün Bilgisi", "Satış", "İş Birliği"],
   },
   footer: {

@@ -75,6 +75,10 @@ export const contactConfig = {
   phone: "0545 442 74 77",
   email: "info@vizyoneldiven.com",
   whatsapp: "905454427477",
+  instagram: {
+    handle: "@vizyoneldiven",
+    url: "https://www.instagram.com/vizyoneldiven/",
+  },
 } as const;
 
 export const dealershipMailSubject = "Vizyon Bölgesel Bayilik Başvurusu";

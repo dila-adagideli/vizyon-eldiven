@@ -16,6 +16,7 @@ export type Messages = {
     callPhone: string;
     sendEmail: string;
     dealershipEmail: string;
+    openInstagram: string;
   };
   nav: {
     product: string;
@@ -124,6 +125,7 @@ export type Messages = {
     intro: string;
     phone: string;
     email: string;
+    instagram: string;
     topics: [string, string, string];
   };
   footer: {

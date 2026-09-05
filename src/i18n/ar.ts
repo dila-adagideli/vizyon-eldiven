@@ -18,6 +18,7 @@ export const ar: Messages = {
     callPhone: "الاتصال على {phone}",
     sendEmail: "إرسال رسالة إلى {email}",
     dealershipEmail: "إرسال رسالة بشأن الوكالة",
+    openInstagram: "افتح حساب إنستغرام Vizyon Zımparalı Eldiven",
   },
   nav: {
     product: "المنتج",
@@ -196,6 +197,7 @@ export const ar: Messages = {
       "تواصل معنا للاستفسار عن منتجاتنا وعمليات البيع وفرص التعاون.",
     phone: "الهاتف",
     email: "البريد",
+    instagram: "إنستغرام",
     topics: ["معلومات المنتج", "المبيعات", "التعاون"],
   },
   footer: {

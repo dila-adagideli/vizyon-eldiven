@@ -18,6 +18,7 @@ export const de: Messages = {
     callPhone: "{phone} anrufen",
     sendEmail: "E-Mail an {email} senden",
     dealershipEmail: "E-Mail zur Partnerschaft senden",
+    openInstagram: "Vizyon Zımparalı Eldiven Instagram-Konto öffnen",
   },
   nav: {
     product: "Produkt",
@@ -196,6 +197,7 @@ export const de: Messages = {
       "Sprechen Sie uns an zu Produkten, Vertrieb und Möglichkeiten der Zusammenarbeit.",
     phone: "Telefon",
     email: "E-Mail",
+    instagram: "Instagram",
     topics: ["Produktinformation", "Vertrieb", "Zusammenarbeit"],
   },
   footer: {
