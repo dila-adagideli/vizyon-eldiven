@@ -79,6 +79,10 @@ export const contactConfig = {
     handle: "@vizyoneldiven",
     url: "https://www.instagram.com/vizyoneldiven/",
   },
+  facebook: {
+    name: "Vizyon Zımparalı Eldiven",
+    url: "https://www.facebook.com/share/19NtFEj4ed/",
+  },
 } as const;
 
 export const dealershipMailSubject = "Vizyon Bölgesel Bayilik Başvurusu";

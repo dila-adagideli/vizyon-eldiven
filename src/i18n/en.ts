@@ -19,6 +19,7 @@ export const en: Messages = {
     sendEmail: "Send an email to {email}",
     dealershipEmail: "Send an email about dealership",
     openInstagram: "Open Vizyon Zımparalı Eldiven Instagram account",
+    openFacebook: "Open Vizyon Zımparalı Eldiven Facebook account",
   },
   nav: {
     product: "Product",
@@ -198,6 +199,7 @@ export const en: Messages = {
     phone: "Phone",
     email: "Email",
     instagram: "Instagram",
+    facebook: "Facebook",
     topics: ["Product Information", "Sales", "Partnership"],
   },
   footer: {

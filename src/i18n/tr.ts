@@ -19,6 +19,7 @@ export const tr: Messages = {
     sendEmail: "{email} adresine e-posta gönder",
     dealershipEmail: "Bayilik başvurusu için e-posta gönder",
     openInstagram: "Vizyon Zımparalı Eldiven Instagram hesabını aç",
+    openFacebook: "Vizyon Zımparalı Eldiven Facebook hesabını aç",
   },
   nav: {
     product: "Ürün",
@@ -198,6 +199,7 @@ export const tr: Messages = {
     phone: "Telefon",
     email: "E-posta",
     instagram: "Instagram",
+    facebook: "Facebook",
     topics: ["Ürün Bilgisi", "Satış", "İş Birliği"],
   },
   footer: {

@@ -19,6 +19,7 @@ export const ar: Messages = {
     sendEmail: "إرسال رسالة إلى {email}",
     dealershipEmail: "إرسال رسالة بشأن الوكالة",
     openInstagram: "افتح حساب إنستغرام Vizyon Zımparalı Eldiven",
+    openFacebook: "افتح حساب فيسبوك Vizyon Zımparalı Eldiven",
   },
   nav: {
     product: "المنتج",
@@ -198,6 +199,7 @@ export const ar: Messages = {
     phone: "الهاتف",
     email: "البريد",
     instagram: "إنستغرام",
+    facebook: "فيسبوك",
     topics: ["معلومات المنتج", "المبيعات", "التعاون"],
   },
   footer: {

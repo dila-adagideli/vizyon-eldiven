@@ -27,6 +27,9 @@ export function Contact() {
   const instagramHref = isContactValue(contactConfig.instagram.url)
     ? contactConfig.instagram.url
     : "";
+  const facebookHref = isContactValue(contactConfig.facebook.url)
+    ? contactConfig.facebook.url
+    : "";
   const dealershipHref = isContactValue(contactConfig.email)
     ? getMailtoHref(contactConfig.email, dealership.mailSubject)
     : "";
@@ -53,7 +56,7 @@ export function Contact() {
           {copy.intro}
         </p>
 
-        {phoneHref || emailHref || instagramHref ? (
+        {phoneHref || emailHref || instagramHref || facebookHref ? (
           <address className="mt-10 grid not-italic sm:grid-cols-2 sm:gap-x-10 lg:mt-12 lg:max-w-3xl">
             {phoneHref ? (
               <p className="border-t border-background/12 py-6">
@@ -103,6 +106,23 @@ export function Contact() {
                   aria-label={messages.a11y.openInstagram}
                 >
                   {contactConfig.instagram.handle}
+                </a>
+              </p>
+            ) : null}
+
+            {facebookHref ? (
+              <p className="border-t border-background/12 py-6">
+                <span className="t-label block text-[0.7rem] tracking-[0.14em] text-background/55">
+                  {copy.facebook}
+                </span>
+                <a
+                  href={facebookHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="editorial-link mt-3 inline-block font-display text-[1.35rem] tracking-[-0.02em] text-background sm:text-[1.5rem]"
+                  aria-label={messages.a11y.openFacebook}
+                >
+                  {contactConfig.facebook.name}
                 </a>
               </p>
             ) : null}
