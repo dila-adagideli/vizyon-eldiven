@@ -360,23 +360,6 @@ html[dir="rtl"] .dir-arrow {
   animation: scale-line 0.75s ease-out 0.15s both;
 }
 
-@keyframes brand-emphasis {
-  0%,
-  100% {
-    opacity: 1;
-    text-shadow: 0 0 0 transparent;
-  }
-
-  50% {
-    opacity: 0.94;
-    text-shadow: 0 0 0.45em color-mix(in srgb, var(--accent) 14%, transparent);
-  }
-}
-
-.brand-emphasis {
-  animation: brand-emphasis 3.6s ease-in-out infinite;
-}
-
 html[dir="rtl"] .scale-line {
   transform-origin: right center;
 }
@@ -388,8 +371,7 @@ html[dir="rtl"] .scale-line {
   .hero-delay-2,
   .hero-delay-3,
   .hero-delay-4,
-  .scale-line,
-  .brand-emphasis {
+  .scale-line {
     animation: none;
   }
 

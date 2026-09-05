@@ -11,8 +11,8 @@ import { VisionMission } from "@/components/sections/VisionMission";
 export default function Home() {
   return (
     <>
-      <Hero />
       <BrandStatement />
+      <Hero />
       <ProductIntro />
       <ProductShowcase />
       <UseCases />
