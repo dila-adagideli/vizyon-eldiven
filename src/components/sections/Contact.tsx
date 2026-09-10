@@ -1,5 +1,6 @@
 "use client";
 
+import { sendGAEvent } from "@next/third-parties/google";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { useLanguage } from "@/i18n/LanguageProvider";
@@ -69,6 +70,13 @@ export function Contact() {
                   rel="noopener noreferrer"
                   className="editorial-link mt-3 inline-block font-display text-[1.35rem] tracking-[-0.02em] text-background sm:text-[1.5rem]"
                   aria-label="WhatsApp üzerinden iletişime geç"
+                  onClick={() => {
+                    sendGAEvent("event", "whatsapp_click", {
+                      link_type: "whatsapp",
+                      link_location: "contact",
+                      link_url: phoneHref,
+                    });
+                  }}
                 >
                   {contactConfig.phone}
                 </a>
