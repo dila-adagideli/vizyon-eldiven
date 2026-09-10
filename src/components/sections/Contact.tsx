@@ -95,6 +95,13 @@ export function Contact() {
                     "{email}",
                     contactConfig.email,
                   )}
+                  onClick={() => {
+                    sendGAEvent("event", "email_click", {
+                      link_type: "email",
+                      link_location: "contact",
+                      link_url: emailHref,
+                    });
+                  }}
                 >
                   {contactConfig.email}
                 </a>
@@ -112,6 +119,13 @@ export function Contact() {
                   rel="noopener noreferrer"
                   className="editorial-link mt-3 inline-block font-display text-[1.35rem] tracking-[-0.02em] text-background sm:text-[1.5rem]"
                   aria-label={messages.a11y.openInstagram}
+                  onClick={() => {
+                    sendGAEvent("event", "instagram_click", {
+                      link_type: "instagram",
+                      link_location: "contact",
+                      link_url: instagramHref,
+                    });
+                  }}
                 >
                   {contactConfig.instagram.handle}
                 </a>
@@ -129,6 +143,13 @@ export function Contact() {
                   rel="noopener noreferrer"
                   className="editorial-link mt-3 inline-block font-display text-[1.35rem] tracking-[-0.02em] text-background sm:text-[1.5rem]"
                   aria-label={messages.a11y.openFacebook}
+                  onClick={() => {
+                    sendGAEvent("event", "facebook_click", {
+                      link_type: "facebook",
+                      link_location: "contact",
+                      link_url: facebookHref,
+                    });
+                  }}
                 >
                   {contactConfig.facebook.name}
                 </a>
