@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import {
   Newsreader,
   Noto_Naskh_Arabic,
@@ -20,6 +21,9 @@ import {
 import { getSiteUrl, isLocalSiteUrl, ogImage, siteConfig } from "@/lib/site";
 import { localeMeta, parseLocale } from "@/i18n";
 import "./globals.css";
+
+const gaMeasurementId =
+  process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim() || "G-XBK383CKTV";
 
 const sourceSans = Source_Sans_3({
   subsets: ["latin", "latin-ext", "cyrillic", "cyrillic-ext"],
@@ -129,6 +133,7 @@ export default async function RootLayout({ children }: LayoutProps<"/">) {
           <Footer />
         </Providers>
       </body>
+      {!isLocalSiteUrl() ? <GoogleAnalytics gaId={gaMeasurementId} /> : null}
     </html>
   );
 }
