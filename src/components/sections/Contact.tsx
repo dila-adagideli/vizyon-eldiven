@@ -68,6 +68,7 @@ export function Contact() {
                   href={phoneHref}
                   target="_blank"
                   rel="noopener noreferrer"
+                  dir="ltr"
                   className="editorial-link mt-3 inline-block font-display text-[1.35rem] tracking-[-0.02em] text-background sm:text-[1.5rem]"
                   aria-label="WhatsApp üzerinden iletişime geç"
                   onClick={() => {
