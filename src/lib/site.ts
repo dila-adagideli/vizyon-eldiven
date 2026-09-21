@@ -72,7 +72,7 @@ export const companyPlaceholders = {
  * Telefon: ekranda görünen biçim. WhatsApp: ülke koduyla, örn. 905xxxxxxxxx
  */
 export const contactConfig = {
-  phone: "0545 442 74 77",
+  phone: "+90 545 442 74 77",
   email: "info@vizyoneldiven.com",
   whatsapp: "905454427477",
   instagram: {
